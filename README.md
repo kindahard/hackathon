@@ -6,9 +6,9 @@
 
 Ensure you have a working Python environment (Jupyter Notebook or VS Code recommended) with the following libraries installed and updated:
 
-* [ ] **Core Analysis:** `numpy`, `pandas`
-* [ ] **Visualization:** `matplotlib`, `seaborn`, `plotly`
-* [ ] **Web Scraping:** `requests`, `selenium` (Ensure you have the correct WebDriver, e.g., ChromeDriver, for Selenium).
+* [x] **Core Analysis:** `numpy`, `pandas`
+* [x] **Visualization:** `matplotlib`, `seaborn`, `plotly`
+* [x] **Web Scraping:** `requests`, `selenium` (Ensure you have the correct WebDriver, e.g., ChromeDriver, for Selenium).
 
 > **Quick Install Command:**
 > Copy and run this in your terminal to ensure everything is there:
@@ -22,13 +22,13 @@ Ensure you have a working Python environment (Jupyter Notebook or VS Code recomm
 
 ### 3. Spreadsheet Software 📊
 
-* [ ] **Microsoft Excel:** Version **2019 or later**.
-* [ ] **Activation Check:** Open Excel  File  Account. Ensure it says "Product Activated."
+* [x] **Microsoft Excel:** Version **2019 or later**.
+* [x] **Activation Check:** Open Excel  File  Account. Ensure it says "Product Activated."
 * [ ] **Add-ins:** (Optional but recommended) Ensure "Analysis ToolPak" is enabled just in case.
 
 ### 4. Business Intelligence Tools 📈
 
-* [ ] **Power BI Desktop:** Installed and updated to the latest version.
+* [x] **Power BI Desktop:** Installed and updated to the latest version.
 * **CRITICAL CHECK:** Go to *File  Options and settings  Options  Security*. Ensure **"Map and Fill Map visuals"** are enabled.
 
 
@@ -36,10 +36,10 @@ Ensure you have a working Python environment (Jupyter Notebook or VS Code recomm
 
 ### 5. Physical Gear 🎒
 
-* [ ] **Laptop:** Fully charged.
-* [ ] **Charger:** Don't forget it! Hackathons drain battery fast.
-* [ ] **National ID:** **Mandatory** for entry.
-* [ ] **Mouse:** Highly recommended for faster dashboarding.
+* [x] **Laptop:** Fully charged.
+* [x] **Charger:** Don't forget it! Hackathons drain battery fast.
+* [x] **National ID:** **Mandatory** for entry.
+* [x] **Mouse:** Highly recommended for faster dashboarding.
 
 ---
 
