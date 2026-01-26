@@ -9,3 +9,5 @@ webdriver-manager
 ipykernel
 reverse_geocoder
 pycountry
+scikit-learn
+lxml
