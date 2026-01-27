@@ -33,22 +33,23 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 def setup_driver():
-    """Initializes Chrome Driver with VPS-friendly options."""
-    chrome_options = uc.Options()
+    """Initializes Undetected Chrome Driver for bypassing WAF on VPS."""
+    # FIX 1: Use ChromeOptions(), not Options()
+    chrome_options = uc.ChromeOptions()
+    
     chrome_options.add_argument("--window-size=1920,1080")
-    chrome_options.add_argument("--headless")
     chrome_options.add_argument("--start-maximized")
+    chrome_options.add_argument("--headless=new") 
     
     # Critical flags for Linux/VPS environments
     chrome_options.add_argument("--no-sandbox") 
     chrome_options.add_argument("--disable-dev-shm-usage")
-    
-    # Check if running as root (common in some VPS setups)
-    if os.geteuid() == 0:
-        chrome_options.add_argument("--no-sandbox")
 
-    service = Service(ChromeDriverManager().install())
-    driver = uc.Chrome(service=service, options=chrome_options)
+    # FIX 2: Do NOT use Service() or ChromeDriverManager().
+    # uc.Chrome() handles the driver binary automatically.
+    # version_main=None tells it to find your installed Chrome version automatically.
+    driver = uc.Chrome(options=chrome_options, version_main=None)
+    
     return driver
 
 def get_details_and_fav(driver, wait):
