@@ -4,13 +4,10 @@ import random
 import re
 import os
 import pandas as pd
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
+import undetected_chromedriver as uc  # Changed import
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from webdriver_manager.chrome import ChromeDriverManager
 
 # --- CONFIGURATION (LINUX PATHS) ---
 # Get the absolute path of the directory where this script is located
@@ -37,7 +34,7 @@ logger = logging.getLogger(__name__)
 
 def setup_driver():
     """Initializes Chrome Driver with VPS-friendly options."""
-    chrome_options = Options()
+    chrome_options = uc.Options()
     chrome_options.add_argument("--window-size=1920,1080")
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--start-maximized")
@@ -51,7 +48,7 @@ def setup_driver():
         chrome_options.add_argument("--no-sandbox")
 
     service = Service(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=service, options=chrome_options)
+    driver = uc.Chrome(service=service, options=chrome_options)
     return driver
 
 def get_details_and_fav(driver, wait):
