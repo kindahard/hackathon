@@ -1,0 +1,34 @@
+2026-01-27 11:52:46,331 [INFO] Loading cities data...
+2026-01-27 11:52:46,606 [INFO] Found 10 cities to scrape: ['Amsterdam', 'Athens', 'Barcelona', 'Berlin', 'Budapest', 'Lisbon', 'London', 'Paris', 'Rome', 'Vienna']
+2026-01-27 11:52:46,606 [INFO] === [1/10] STARTING CITY: Amsterdam ===
+2026-01-27 11:52:46,607 [ERROR] Critical error processing city Amsterdam: module 'os' has no attribute 'geteuid'
+2026-01-27 11:52:46,607 [INFO] Finished city: Amsterdam
+2026-01-27 11:52:46,607 [INFO] === [2/10] STARTING CITY: Athens ===
+2026-01-27 11:52:46,608 [ERROR] Critical error processing city Athens: module 'os' has no attribute 'geteuid'
+2026-01-27 11:52:46,608 [INFO] Finished city: Athens
+2026-01-27 11:52:46,608 [INFO] === [3/10] STARTING CITY: Barcelona ===
+2026-01-27 11:52:46,609 [ERROR] Critical error processing city Barcelona: module 'os' has no attribute 'geteuid'
+2026-01-27 11:52:46,609 [INFO] Finished city: Barcelona
+2026-01-27 11:52:46,609 [INFO] === [4/10] STARTING CITY: Berlin ===
+2026-01-27 11:52:46,609 [ERROR] Critical error processing city Berlin: module 'os' has no attribute 'geteuid'
+2026-01-27 11:52:46,610 [INFO] Finished city: Berlin
+2026-01-27 11:52:46,610 [INFO] === [5/10] STARTING CITY: Budapest ===
+2026-01-27 11:52:46,610 [ERROR] Critical error processing city Budapest: module 'os' has no attribute 'geteuid'
+2026-01-27 11:52:46,610 [INFO] Finished city: Budapest
+2026-01-27 11:52:46,610 [INFO] === [6/10] STARTING CITY: Lisbon ===
+2026-01-27 11:52:46,611 [ERROR] Critical error processing city Lisbon: module 'os' has no attribute 'geteuid'
+2026-01-27 11:52:46,611 [INFO] Finished city: Lisbon
+2026-01-27 11:52:46,611 [INFO] === [7/10] STARTING CITY: London ===
+2026-01-27 11:52:46,611 [ERROR] Critical error processing city London: module 'os' has no attribute 'geteuid'
+2026-01-27 11:52:46,611 [INFO] Finished city: London
+2026-01-27 11:52:46,612 [INFO] === [8/10] STARTING CITY: Paris ===
+2026-01-27 11:52:46,612 [ERROR] Critical error processing city Paris: module 'os' has no attribute 'geteuid'
+2026-01-27 11:52:46,612 [INFO] Finished city: Paris
+2026-01-27 11:52:46,612 [INFO] === [9/10] STARTING CITY: Rome ===
+2026-01-27 11:52:46,612 [ERROR] Critical error processing city Rome: module 'os' has no attribute 'geteuid'
+2026-01-27 11:52:46,613 [INFO] Finished city: Rome
+2026-01-27 11:52:46,613 [INFO] === [10/10] STARTING CITY: Vienna ===
+2026-01-27 11:52:46,613 [ERROR] Critical error processing city Vienna: module 'os' has no attribute 'geteuid'
+2026-01-27 11:52:46,613 [INFO] Finished city: Vienna
+2026-01-27 11:52:46,614 [INFO] Scraping complete. Total items: 0
+2026-01-27 11:52:46,614 [WARNING] No data collected.
