@@ -13,7 +13,6 @@
 **Status**: Created and production-ready
 
 **Features**:
-- 🏆 Professional hackathon winner presentation with badges
 - 🔍 Executive summary with "Data Forensics Story" hook
 - 🏗️ Mermaid architecture diagram (CSV → Python → Docker → BI/App)
 - ✨ 5 key features sections:
