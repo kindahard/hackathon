@@ -1,0 +1,35 @@
+Act as a Senior Data Scientist and Technical Lead for a high-stakes Hackathon team. I need you to perform two major documentation tasks for this project.
+
+### Task 1: Notebook Documentation
+Analyze the Jupyter Notebooks in this codebase. For each notebook, I need you to generate professional Markdown cells to be inserted between code blocks.
+* **Structure:** Use H1 (#) for Titles, H2 (##) for major sections (Data Ingestion, Transformation, Modeling), and H3 (###) for steps.
+* **Content:** Explain the *business logic* and *analytical intent*, not just the syntax.
+* **Math:** If you see financial calculations or statistical tests, write the formulas in LaTeX. Specifically, look for the "Present Worth" calculation we used to validate the dataset age.
+
+### Task 2: Generate the Master README.md
+Create a `README.md` file that presents this project as a complete "Data Forensics & Architecture" solution. Use the **Project Context** provided below to fill in the details. The README must be structured to impress judges.
+
+**Use this specific "Project Context" to write the README:**
+1.  **The Hook (Data Forensics):** We discovered the provided dataset was uncorrelated and outdated. We scraped fresh Airbnb data (Selenium) to compare.
+2.  **The Math:** We mathematically proved the dataset was 8 years old using the Future Value formula: $F = P(1 + i)^n$ (where $i=10\%$, $n=8$). We used this to normalize the data.
+3.  **Data Engineering:** We expanded the dataset from 20 columns to 36 columns (Feature Engineering).
+4.  **Infrastructure:** We used Docker Compose to deploy a PostgreSQL database and pgAdmin.
+5.  **Architecture:**
+    * **Input:** Raw CSVs + Scraped Data.
+    * **Process:** Python (Cleaning/Math) -> Docker/Postgres (Warehousing).
+    * **Output:** Power BI (Business Intelligence) + Streamlit (User App).
+6.  **Power BI Dashboard:** Mention that we denormalized the DB into 3 tables for Power BI and created 4 pages:
+    * Overview
+    * Distance Analysis (Geo-spatial)
+    * Price Analysis (Elasticity)
+    * C-Level Page (Business ROI & Expansion).
+7.  **Tech Stack:** Python, Selenium, SQL, Docker, Power BI, Streamlit.
+
+**Required README Structure:**
+* **Title & Badge:** Project Name + "Hackathon Winner" vibe.
+* **Executive Summary:** The story of how we fixed the "bad data" using math and scraping.
+* **Architecture Diagram:** Use Mermaid.js syntax to visualize the flow (Scraping -> Math -> Postgres -> Power BI/Streamlit).
+* **Key Features:** (Forensics, Engineering, Dashboard, App).
+* **How to Run:** Instructions for `docker-compose up` and `streamlit run`.
+
+Please generate the Markdown content for the Notebooks first, followed immediately by the full content for the `README.md`.
