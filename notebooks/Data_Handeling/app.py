@@ -25,17 +25,46 @@ with st.form("input_form"):
     submit = st.form_submit_button("Predict Price")
 
 if submit:
-    # Match the features exactly as defined in your Ai_Model pipeline
-    data = pd.DataFrame({
-        'room_type': [room], 'city': [city], 'max_guests': [guests],
-        'num_bedrooms': [bedrooms], 'distance_city_center': [dist_center],
-        'cleanliness_score': [clean], 'Monthly_Average_Net_salary': [salary],
-        'Meal_at_Inexpensive_Restaurant': [meal],
-        'Taxi_price_per_Km': [2.0], 'Monthly_Basic_Utilities': [250.0]
-    })
-    
-    # Predict and reverse log transform
+    user_input = {
+        'room_type': room,
+        'city': city,
+        'max_guests': guests,
+        'num_bedrooms': bedrooms,
+        'distance_city_center': dist_center,
+        'cleanliness_score': clean,
+        'Monthly_Average_Net_salary': salary,
+        'Meal_at_Inexpensive_Restaurant': meal,
+        'Taxi_price_per_Km': 2.0,
+        'Monthly_Basic_Utilities': 250.0,
+    }
+
+    preprocessor = model.named_steps['preprocessor']
+
+    # 🔹 columns by type
+    categorical_cols = []
+    numerical_cols = []
+
+    for name, transformer, cols in preprocessor.transformers_:
+        if transformer == 'drop':
+            continue
+        if hasattr(transformer, 'categories_'):  # OneHotEncoder
+            categorical_cols.extend(cols)
+        else:
+            numerical_cols.extend(cols)
+
+    # 🔹 fill missing categorical
+    for col in categorical_cols:
+        if col not in user_input:
+            user_input[col] = "Unknown"
+
+    # 🔹 fill missing numeric
+    for col in numerical_cols:
+        if col not in user_input:
+            user_input[col] = 0.0
+
+    data = pd.DataFrame([user_input])
+
     prediction_log = model.predict(data)[0]
     final_price = np.expm1(prediction_log)
-    
+
     st.success(f"### Predicted Price: ${final_price:.2f}")

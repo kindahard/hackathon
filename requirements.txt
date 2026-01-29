@@ -14,3 +14,7 @@ lxml
 sqlalchemy 
 psycopg2-binary
 streamlit
+xgboost
+linear-regression
+operator
+scipy

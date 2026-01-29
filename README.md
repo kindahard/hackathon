@@ -76,7 +76,6 @@ graph TD
 
 ### 1. Start Infrastructure
 ```bash
-cd C:\Users\mekod\Desktop\Hackathon
 docker-compose up -d
 ```
 
@@ -210,16 +209,10 @@ Hackathon/
 - **Engineering**: End-to-end pipeline (scraping → database → visualization)
 - **Analytics**: 4-page Power BI dashboard with business insights
 
-## 📝 License
-
-[Specify license if applicable]
-
 ## 🙏 Acknowledgments
 
 - Airbnb (data source)
 - Numbeo (cost of living metrics)
 - Hackathon organizers
 
----
-
-**Co-Authored-By**: Warp <agent@warp.dev>
+## 🏆 Team Members
